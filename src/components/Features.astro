@@ -1,0 +1,66 @@
+---
+const features = [
+  {
+    icon: "⚡",
+    title: "Ultra Rapide",
+    description: "Performance optimale avec des temps de chargement éclair pour une expérience utilisateur fluide."
+  },
+  {
+    icon: "🔒",
+    title: "Sécurité Maximale",
+    description: "Vos données sont protégées avec un chiffrement de niveau bancaire et des sauvegardes automatiques."
+  },
+  {
+    icon: "🎨",
+    title: "Design Moderne",
+    description: "Interface intuitive et élégante qui s'adapte à tous vos appareils pour travailler n'importe où."
+  },
+  {
+    icon: "📊",
+    title: "Analytics Avancés",
+    description: "Suivez vos performances en temps réel avec des tableaux de bord personnalisables."
+  },
+  {
+    icon: "🔄",
+    title: "Synchronisation",
+    description: "Synchronisation automatique entre tous vos appareils pour ne jamais perdre vos données."
+  },
+  {
+    icon: "💬",
+    title: "Support 24/7",
+    description: "Notre équipe d'experts est disponible à tout moment pour vous accompagner."
+  }
+];
+---
+
+<section id="features" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Tout Ce Dont Vous Avez Besoin
+      </h2>
+      <p class="text-xl text-gray-600">
+        Des fonctionnalités puissantes conçues pour simplifier votre quotidien et maximiser votre productivité.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature, index) => (
+        <div 
+          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-on-scroll group"
+          style={`animation-delay: ${index * 0.1}s;`}
+        >
+          <div class="text-5xl mb-4 transform group-hover:scale-110 transition-transform">
+            {feature.icon}
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
